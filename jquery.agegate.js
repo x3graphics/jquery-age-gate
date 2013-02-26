@@ -65,7 +65,8 @@
 
       var year = $('<select/>').attr({ 'id': 'agegate-year', 'name': 'agegate-year' }).append(function(){
         var years = '';
-        for(var i = 2011; i > 1900; i--){
+        var currentYear = (new Date).getFullYear();
+        for(var i = currentYear; i > 1900; i--){
           years += '<option value="'+i+'">' + i + '</option>';
         }
         return years;
